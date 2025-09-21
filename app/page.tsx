@@ -8,7 +8,7 @@ export default function Home() {
           <p className="text-gray-400 text-sm mb-4">Technical Product Manager</p>
           <nav className="flex gap-6">
             <a
-              href="/lucaslaibly_resume.pdf"
+              href="public/lucaslaibly_resume.pdf"
               download="lucaslaibly_resume.pdf"
               className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2"
             >
