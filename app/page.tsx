@@ -7,21 +7,20 @@ export default function Home() {
           <h1 className="text-xl font-medium text-white">Lucas Laibly</h1>
           <p className="text-gray-400 text-sm mb-4">Technical Product Manager</p>
           <nav className="flex gap-6">
-            <a
-              href="./folder/lucaslaibly_resume.pdf"
-              target="_blank"
-              className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v2H6v-2z" />
-              </svg>
-              Resume
+          <a
+            href="/lucaslaibly_resume.pdf"
+            target="_blank"
+            className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v2H6v-2z" />
+            </svg>
+            Resume
             </a>
           </nav>
         </div>
         <div className="flex gap-4">
           <a
-            href="https://www.linkedin.com/in/lucas-laibly/"
+            href="folder/lucaslaibly_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"
@@ -52,10 +51,8 @@ export default function Home() {
           </h2>
 
           <p className="text-gray-400 text-lg leading-relaxed max-w-3xl">
-            I am currently working as a product manager for integrations at Informa TechTarget. Previously, I worked as
-            a product manager at a consulting firm and started my career in backend software engineering. I never lost
-            my interest in the overlap of engineering and business, finding that the balance between the two is
-            incredibly rewarding.
+            I am currently working as a product manager for integrations at Informa TechTarget. My previous expereince is based in software engineering and technology consultant.
+            I am fascinated with companies and people who move fast and take risks to redefine the world around us.
           </p>
         </section>
 
