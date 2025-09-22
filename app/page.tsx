@@ -8,8 +8,8 @@ export default function Home() {
           <p className="text-gray-400 text-sm mb-4">Technical Product Manager</p>
           <nav className="flex gap-6">
             <a
-              href="public/lucaslaibly_resume.pdf"
-              download="lucaslaibly_resume.pdf"
+              href="lucaslaibly.github.io/folder/lucaslaibly_resume.pdf"
+              target="_blank"
               className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
