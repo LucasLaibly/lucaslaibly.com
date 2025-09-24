@@ -52,7 +52,7 @@ export default function Home() {
 
           <p className="text-gray-400 text-lg leading-relaxed max-w-3xl">
             I am currently working as a product manager for integrations at Informa TechTarget. My previous expereince is based in software engineering and technology consultant.
-            I am fascinated with companies and people who move fast and take risks to redefine the world around us.
+            I am fascinated with companies and people who move fast and take risks to redefine the world.
           </p>
         </section>
 
