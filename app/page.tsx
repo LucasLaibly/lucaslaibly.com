@@ -47,12 +47,11 @@ export default function Home() {
         {/* Hero Section */}
         <section className="mb-20">
           <h2 className="text-4xl md:text-5xl font-medium leading-tight text-balance mb-8">
-            {"I am a technical product manager who started as a software engineer. I do not like to sit around and wait for an assignment."}               
+            {"I am a technical product manager who started as a software engineer."}               
           </h2>
 
           <p className="text-gray-400 text-lg leading-relaxed max-w-3xl">
-            I am currently working as a product manager for integrations at Informa TechTarget. My previous expereince is based in software engineering and technology consultant.
-            I am fascinated with companies and people who move fast and take risks to redefine the world.
+          From software engineering to consulting to product, I thrive on building meaningful solutions. I balance creating prototypes and documentation to accelerate engineering, with delivering demos that align stakeholders more effectively. Always eager to collaborate on what is next.
           </p>
         </section>
 
