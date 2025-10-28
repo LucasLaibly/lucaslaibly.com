@@ -14,7 +14,7 @@ export default function Vigil() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="flex justify-between items-start px-8 py-8 max-w-4xl mx-auto overflow-visible">
+      <header className="flex justify-between items-start px-8 py-8 max-w-4xl mx-auto">
         <div className="w-80">
           <a href="/" className="hover:opacity-80 transition-opacity">
             <h1 className="text-xl font-medium text-white">Lucas Laibly</h1>
@@ -37,7 +37,7 @@ export default function Vigil() {
             </a>
           </nav>
         </div>
-        <div className="flex gap-4 flex-shrink-0">
+        <div className="flex gap-4">
           <a
             href="folder/lucaslaibly_resume.pdf"
             target="_blank"
