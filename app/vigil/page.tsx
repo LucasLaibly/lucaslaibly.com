@@ -1,4 +1,16 @@
+"use client"
+
+import { useState } from "react"
+
 export default function Vigil() {
+  const [year, setYear] = useState(2026)
+
+  const handleYearClick = () => {
+    if (year < 2035) {
+      setYear(year + 1)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
@@ -9,19 +21,19 @@ export default function Vigil() {
           </a>
           <p className="text-gray-400 text-sm mb-4">Technical Product Manager</p>
           <nav className="flex gap-6">
-          <a
-            href="/lucaslaibly_resume.pdf"
-            target="_blank"
-            className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v2H6v-2z" />
-            </svg>
-            Resume
+            <a
+              href="/lucaslaibly_resume.pdf"
+              target="_blank"
+              className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2"
+              rel="noreferrer"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v2H6v-2z" />
+              </svg>
+              Resume
             </a>
-          <a
-            href="/vigil"
-            className="text-gray-300 hover:text-white transition-colors text-sm">
-            Vigil
+            <a href="/vigil" className="text-gray-300 hover:text-white transition-colors text-sm">
+              Vigil
             </a>
           </nav>
         </div>
@@ -50,10 +62,115 @@ export default function Vigil() {
       </header>
 
       {/* Main Content */}
-      <main className="flex items-center justify-center" style={{ minHeight: 'calc(100vh - 120px)' }}>
-        <h1 className="text-4xl md:text-5xl font-medium text-white">
-          Coming Soon 2026
-        </h1>
+      <main className="max-w-4xl mx-auto px-8 py-16">
+        <section className="mb-12">
+          <h2 className="text-4xl md:text-5xl font-medium leading-tight text-balance mb-8 text-center">
+            Coming Soon{" "}
+            {year < 2035 && (
+              <span
+                onClick={handleYearClick}
+                className="cursor-pointer hover:text-gray-300 transition-colors inline-block"
+              >
+                {year}
+              </span>
+            )}
+          </h2>
+        </section>
+
+        <section className="mb-16">
+          <div className="relative flex items-center justify-between max-w-2xl mx-auto px-8">
+            {/* Left Bot */}
+            <div className="w-12 h-12 rounded-full bg-gray-800 border-2 border-gray-600 flex items-center justify-center z-20">
+              <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+            </div>
+
+            {/* Connection Line */}
+            <div className="absolute left-14 right-14 h-0.5 bg-gray-700"></div>
+
+            {/* Animated Ball */}
+            <div
+              className="absolute w-4 h-4 rounded-full bg-white shadow-lg shadow-white/50 z-10"
+              style={{
+                animation: "moveBall 12s ease-in-out infinite",
+              }}
+            ></div>
+
+            {/* Right Bot */}
+            <div className="w-12 h-12 rounded-full bg-gray-800 border-2 border-gray-600 flex items-center justify-center z-20">
+              <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+            </div>
+          </div>
+
+          <style jsx>{`
+            @keyframes moveBall {
+              0% {
+                left: 3rem;
+              }
+              33.33% {
+                left: calc(100% - 3rem);
+              }
+              50% {
+                left: calc(100% - 3rem);
+              }
+              83.33% {
+                left: 3rem;
+              }
+              100% {
+                left: 3rem;
+              }
+            }
+          `}</style>
+        </section>
+
+        {/* Feature Boxes Section */}
+        <section>
+          <div className="space-y-6">
+            <div className="relative bg-gray-900/50 border border-gray-800 p-6 group hover:bg-gray-900/70 transition-colors">
+              {/* Corner brackets */}
+              <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-white"></div>
+              <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-white"></div>
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-white"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
+
+              <div className="space-y-3">
+                <h4 className="text-white font-medium text-lg">Agentic Transparency </h4>
+                <p className="text-gray-400">
+                  See the details about how your agents are communicating, both to customers and to other agents.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative bg-gray-900/50 border border-gray-800 p-6 group hover:bg-gray-900/70 transition-colors">
+              {/* Corner brackets */}
+              <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-white"></div>
+              <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-white"></div>
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-white"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
+
+              <div className="space-y-3">
+                <h4 className="text-white font-medium text-lg">Agentic Freedoms </h4>
+                <p className="text-gray-400">
+                  Set tolerances and thresholds for your agents to operate within, avoiding dead end conversations.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative bg-gray-900/50 border border-gray-800 p-6 group hover:bg-gray-900/70 transition-colors">
+              {/* Corner brackets */}
+              <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-white"></div>
+              <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-white"></div>
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-white"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
+
+              <div className="space-y-3">
+                <h4 className="text-white font-medium text-lg">Agentic Trust </h4>
+                <p className="text-gray-400">
+                  Get a second opion on critical communications before they are sent out to customers or other agents.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   )
