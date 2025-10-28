@@ -4,7 +4,9 @@ export default function Home() {
       {/* Header */}
       <header className="flex justify-between items-start px-8 py-8 max-w-4xl mx-auto">
         <div className="w-80">
-          <h1 className="text-xl font-medium text-white">Lucas Laibly</h1>
+          <a href="/" className="hover:opacity-80 transition-opacity">
+            <h1 className="text-xl font-medium text-white">Lucas Laibly</h1>
+          </a>
           <p className="text-gray-400 text-sm mb-4">Technical Product Manager</p>
           <nav className="flex gap-6">
           <a
@@ -15,6 +17,11 @@ export default function Home() {
               <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v2H6v-2z" />
             </svg>
             Resume
+            </a>
+          <a
+            href="/vigil"
+            className="text-gray-300 hover:text-white transition-colors text-sm">
+            Vigil
             </a>
           </nav>
         </div>
