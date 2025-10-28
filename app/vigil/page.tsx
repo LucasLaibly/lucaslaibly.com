@@ -135,8 +135,7 @@ export default function Vigil() {
               <div className="space-y-3">
                 <h4 className="text-white font-medium text-lg">Agentic Transparency </h4>
                 <p className="text-gray-400">
-                  Extract details about how your agents are communicating with other agents in and outside your
-                  organization.
+                  See the details about how your agents are communicating, both to customers and to other agents.
                 </p>
               </div>
             </div>
@@ -151,7 +150,7 @@ export default function Vigil() {
               <div className="space-y-3">
                 <h4 className="text-white font-medium text-lg">Agentic Freedoms </h4>
                 <p className="text-gray-400">
-                  Vigil allows for tolerances in A2A and H2A conversations so your agents do not arrive in dead ends.
+                  Set tolerances and thresholds for your agents to operate within, avoiding dead end conversations.
                 </p>
               </div>
             </div>
@@ -166,7 +165,7 @@ export default function Vigil() {
               <div className="space-y-3">
                 <h4 className="text-white font-medium text-lg">Agentic Trust </h4>
                 <p className="text-gray-400">
-                  Leveraging agents includes a high degree of trust, Vigil gives you a second set of eyes.
+                  Get a second opion on critical communications before they are sent out to customers or other agents.
                 </p>
               </div>
             </div>
