@@ -91,7 +91,7 @@ export default function Vigil() {
             <div
               className="absolute w-4 h-4 rounded-full bg-white shadow-lg shadow-white/50 z-10"
               style={{
-                animation: "moveBall 6s ease-in-out infinite",
+                animation: "moveBall 12s ease-in-out infinite",
               }}
             ></div>
 
