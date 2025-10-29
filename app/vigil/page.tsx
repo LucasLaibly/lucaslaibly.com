@@ -52,7 +52,7 @@ export default function Vigil() {
       {/* Main Content */}
       <main className="flex items-center justify-center" style={{ minHeight: 'calc(100vh - 120px)' }}>
         <h1 className="text-4xl md:text-5xl font-medium text-white">
-          Coming Soon 2026
+          Coming Soon in 2026
         </h1>
       </main>
     </div>
