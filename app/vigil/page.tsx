@@ -6,7 +6,7 @@ export default function Vigil() {
   const [year, setYear] = useState(2026)
 
   const handleYearClick = () => {
-    if (year < 2035) {
+    if (year <= 2035) {
       setYear(year + 1)
     }
   }
@@ -64,7 +64,15 @@ export default function Vigil() {
       {/* Main Content */}
       <main className="flex items-center justify-center" style={{ minHeight: 'calc(100vh - 120px)' }}>
         <h1 className="text-4xl md:text-5xl font-medium text-white">
-          Coming Soon in 2026
+          Coming Soon{year < 2036 && ' in '}
+          {year < 2036 && (
+            <button
+              onClick={handleYearClick}
+              className="hover:text-gray-300 transition-colors cursor-pointer decoration-gray-500 hover:decoration-gray-300"
+            >
+              {year}
+            </button>
+          )}
         </h1>
       </main>
     </div>
