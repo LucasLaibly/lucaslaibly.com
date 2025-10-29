@@ -163,9 +163,9 @@ export default function Vigil() {
               <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
 
               <div className="space-y-3">
-                <h4 className="text-white font-medium text-lg">Agentic Trust </h4>
+                <h4 className="text-white font-medium text-lg">Agentic Trust</h4>
                 <p className="text-gray-400">
-                  Get a second opion on critical communications before they are sent out to customers or other agents.
+                  Vigil acts as second level of evaluation before responses go to customers.
                 </p>
               </div>
             </div>
