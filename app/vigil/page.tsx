@@ -1,4 +1,16 @@
+"use client"
+
+import { useState } from "react"
+
 export default function Vigil() {
+  const [year, setYear] = useState(2026)
+
+  const handleYearClick = () => {
+    if (year < 2035) {
+      setYear(year + 1)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
@@ -9,19 +21,19 @@ export default function Vigil() {
           </a>
           <p className="text-gray-400 text-sm mb-4">Technical Product Manager</p>
           <nav className="flex gap-6">
-          <a
-            href="/lucaslaibly_resume.pdf"
-            target="_blank"
-            className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v2H6v-2z" />
-            </svg>
-            Resume
+            <a
+              href="/lucaslaibly_resume.pdf"
+              target="_blank"
+              className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2"
+              rel="noreferrer"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v2H6v-2z" />
+              </svg>
+              Resume
             </a>
-          <a
-            href="/vigil"
-            className="text-gray-300 hover:text-white transition-colors text-sm">
-            Vigil
+            <a href="/vigil" className="text-gray-300 hover:text-white transition-colors text-sm">
+              Vigil
             </a>
           </nav>
         </div>
