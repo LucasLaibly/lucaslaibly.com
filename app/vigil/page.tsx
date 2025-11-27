@@ -162,7 +162,7 @@ export default function Vigil() {
                   </div>
                 </div>
 
-                {/* Column 3: Flexibility */}
+                {/* Column 3: Invisibility */}
                 <div className="relative bg-gray-900/50 border border-gray-800 p-6 hover:bg-gray-900/70 transition-colors">
                   {/* Corner brackets */}
                   <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-white"></div>
@@ -171,7 +171,7 @@ export default function Vigil() {
                   <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
 
                   <div className="space-y-4">
-                    <h2 className="text-xl font-medium text-white">Flexibility</h2>
+                    <h2 className="text-xl font-medium text-white">Invisibility</h2>
                     <p className="text-gray-400 text-sm leading-relaxed">
                       A layer in your stack you won't know it exists until an agent goes rogue and Vigil stops it before
                       a customer experiences it. Seamless protection that works invisibly until you need it most.
