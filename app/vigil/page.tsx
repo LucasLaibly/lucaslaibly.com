@@ -125,6 +125,7 @@ export default function Vigil() {
             </div>
           ) : (
             <div className="w-full animate-in fade-in duration-700">
+              <h2 className="text-3xl font-medium text-white text-center mb-8">With Vigil</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Column 1: A2A Observability */}
                 <div className="relative bg-gray-900/50 border border-gray-800 p-6 hover:bg-gray-900/70 transition-colors">
