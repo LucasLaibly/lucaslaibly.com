@@ -48,12 +48,11 @@ export default function Vigil() {
       }, 50) // Typing speed
 
       return () => clearTimeout(typingTimer)
-    } else {
-      // Finished current line, pause before next line
+    } else if (currentLine < messages.length - 1) {
       const pauseTimer = setTimeout(() => {
         setCurrentLine(currentLine + 1)
         setCurrentChar(0)
-      }, 2000) // 2 second pause between lines
+      }, 1000) // 1 second pause before next line
 
       return () => clearTimeout(pauseTimer)
     }
