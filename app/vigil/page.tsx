@@ -3,14 +3,13 @@
 import { useState, useEffect } from "react"
 
 export default function Vigil() {
-  const [year, setYear] = useState(2026)
-  const [displayedText, setDisplayedText] = useState<string[]>([])
-  const [currentLine, setCurrentLine] = useState(0)
+  const [displayedText, setDisplayedText] = useState("")
   const [currentChar, setCurrentChar] = useState(0)
   const [showCursor, setShowCursor] = useState(true)
   const [isTyping, setIsTyping] = useState(false)
+  const [terminalClosed, setTerminalClosed] = useState(false)
 
-  const messages = ["Be vigiliant about agents acting on your behalf", "Agentic observation without the overhead"]
+  const message = "Be vigilant about agents acting on your behalf"
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
@@ -29,40 +28,24 @@ export default function Vigil() {
   }, [])
 
   useEffect(() => {
-    if (!isTyping || currentLine >= messages.length) return
+    if (!isTyping) return
 
-    const currentMessage = messages[currentLine]
-
-    if (currentChar < currentMessage.length) {
+    if (currentChar < message.length) {
       // Type next character
       const typingTimer = setTimeout(() => {
-        setDisplayedText((prev) => {
-          const newText = [...prev]
-          if (!newText[currentLine]) {
-            newText[currentLine] = ""
-          }
-          newText[currentLine] = currentMessage.slice(0, currentChar + 1)
-          return newText
-        })
+        setDisplayedText(message.slice(0, currentChar + 1))
         setCurrentChar(currentChar + 1)
       }, 50) // Typing speed
 
       return () => clearTimeout(typingTimer)
-    } else if (currentLine < messages.length - 1) {
-      const pauseTimer = setTimeout(() => {
-        setCurrentLine(currentLine + 1)
-        setCurrentChar(0)
-      }, 1000) // 1 second pause before next line
+    } else {
+      const closeTimer = setTimeout(() => {
+        setTerminalClosed(true)
+      }, 1000)
 
-      return () => clearTimeout(pauseTimer)
+      return () => clearTimeout(closeTimer)
     }
-  }, [isTyping, currentChar, currentLine, messages])
-
-  const handleYearClick = () => {
-    if (year <= 2035) {
-      setYear(year + 1)
-    }
-  }
+  }, [isTyping, currentChar, message])
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -115,36 +98,64 @@ export default function Vigil() {
       </header>
 
       {/* Main Content */}
-      <main className="flex items-center justify-center" style={{ minHeight: "calc(100vh - 120px)" }}>
-        <div className="w-full max-w-2xl mx-4 bg-gray-900 rounded-lg border border-gray-700 shadow-2xl">
-          {/* Terminal header */}
-          <div className="bg-gray-800 px-4 py-2 rounded-t-lg flex items-center gap-2 border-b border-gray-700">
-            <div className="flex gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+      <main className="flex items-center justify-center px-4" style={{ minHeight: "calc(100vh - 120px)" }}>
+        {!terminalClosed ? (
+          <div className="w-full max-w-2xl bg-gray-900 rounded-lg border border-gray-700 shadow-2xl transition-all duration-500">
+            {/* Terminal header */}
+            <div className="bg-gray-800 px-4 py-2 rounded-t-lg flex items-center gap-2 border-b border-gray-700">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span className="text-gray-400 text-sm ml-2">vigil — terminal</span>
             </div>
-            <span className="text-gray-400 text-sm ml-2">vigil — terminal</span>
-          </div>
 
-          {/* Terminal body */}
-          <div className="p-6 font-mono text-sm min-h-[200px]">
-            <div className="text-green-400">
-              {displayedText.map((line, index) => (
-                <div key={index} className="mb-2">
-                  <span className="text-gray-500 mr-2">$</span>
-                  {line}
-                </div>
-              ))}
-              {currentLine < messages.length && (
+            {/* Terminal body */}
+            <div className="p-6 font-mono text-sm min-h-[200px]">
+              <div className="text-green-400">
                 <div className="flex items-center">
                   <span className="text-gray-500 mr-2">$</span>
-                  <span className={showCursor ? "opacity-100" : "opacity-0"}>▋</span>
+                  {displayedText}
+                  {currentChar >= message.length ? null : (
+                    <span className={showCursor ? "opacity-100" : "opacity-0"}>▋</span>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="w-full max-w-5xl animate-in fade-in duration-700">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Column 1: A2A Observability */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-semibold text-white">A2A Observability</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  Track important conversations between agents and understand what's happening in your agentic systems.
+                  Monitor interactions in real-time and gain visibility into agent-to-agent communication patterns.
+                </p>
+              </div>
+
+              {/* Column 2: Policy Enforcement */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-semibold text-white">Policy Enforcement</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  Agent conversations must adhere to policies with thresholds so that behavior echoing does not occur.
+                  Set guardrails and ensure your agents operate within defined boundaries at all times.
+                </p>
+              </div>
+
+              {/* Column 3: Flexibility */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-semibold text-white">Flexibility</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  A layer in your stack you won't know it exists until an agent goes rogue and Vigil stops it before a
+                  customer experiences it. Seamless protection that works invisibly until you need it most.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </div>
   )
