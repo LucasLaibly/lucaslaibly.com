@@ -49,7 +49,6 @@ export default function Vigil() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Header */}
       <header className="flex justify-between items-start px-8 py-8 max-w-4xl mx-auto">
         <div className="w-80">
           <a href="/" className="hover:opacity-80 transition-opacity">
@@ -91,19 +90,24 @@ export default function Vigil() {
             className="text-gray-400 hover:text-white transition-colors"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-6.627-5.373-12-12-12z" />
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
             </svg>
           </a>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-8" style={{ minHeight: "calc(100vh - 120px)" }}>
-        <div className="flex items-center justify-center">
+      <main className="max-w-4xl mx-auto px-8 flex items-center" style={{ minHeight: "calc(100vh - 160px)" }}>
+        <div className="w-full">
           {!terminalClosed ? (
-            <div className="w-full max-w-2xl bg-gray-900 rounded-lg border border-gray-700 shadow-2xl transition-all duration-500">
+            <div className="relative w-full max-w-2xl mx-auto bg-gray-900/50 border border-gray-800 transition-all duration-500 hover:bg-gray-900/70">
+              {/* Corner brackets */}
+              <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-white"></div>
+              <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-white"></div>
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-white"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
+
               {/* Terminal header */}
-              <div className="bg-gray-800 px-4 py-2 rounded-t-lg flex items-center gap-2 border-b border-gray-700">
+              <div className="bg-gray-800/50 px-4 py-2 flex items-center gap-2 border-b border-gray-700">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -127,33 +131,57 @@ export default function Vigil() {
             </div>
           ) : (
             <div className="w-full animate-in fade-in duration-700">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Column 1: A2A Observability */}
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-white">A2A Observability</h2>
-                  <p className="text-gray-400 leading-relaxed">
-                    Track important conversations between agents and understand what's happening in your agentic
-                    systems. Monitor interactions in real-time and gain visibility into agent-to-agent communication
-                    patterns.
-                  </p>
+                <div className="relative bg-gray-900/50 border border-gray-800 p-6 hover:bg-gray-900/70 transition-colors">
+                  {/* Corner brackets */}
+                  <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-white"></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-white"></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-white"></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
+
+                  <div className="space-y-4">
+                    <h2 className="text-xl font-medium text-white">A2A Observability</h2>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      Track important conversations between agents and understand what's happening in your agentic
+                      systems. Monitor interactions in real-time and gain visibility into agent-to-agent communication
+                      patterns.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Column 2: Policy Enforcement */}
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-white">Policy Enforcement</h2>
-                  <p className="text-gray-400 leading-relaxed">
-                    Agent conversations must adhere to policies with thresholds so that behavior echoing does not occur.
-                    Set guardrails and ensure your agents operate within defined boundaries at all times.
-                  </p>
+                <div className="relative bg-gray-900/50 border border-gray-800 p-6 hover:bg-gray-900/70 transition-colors">
+                  {/* Corner brackets */}
+                  <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-white"></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-white"></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-white"></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
+
+                  <div className="space-y-4">
+                    <h2 className="text-xl font-medium text-white">Policy Enforcement</h2>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      Agent conversations must adhere to policies with thresholds so that behavior echoing does not
+                      occur. Set guardrails and ensure your agents operate within defined boundaries at all times.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Column 3: Flexibility */}
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-white">Flexibility</h2>
-                  <p className="text-gray-400 leading-relaxed">
-                    A layer in your stack you won't know it exists until an agent goes rogue and Vigil stops it before a
-                    customer experiences it. Seamless protection that works invisibly until you need it most.
-                  </p>
+                <div className="relative bg-gray-900/50 border border-gray-800 p-6 hover:bg-gray-900/70 transition-colors">
+                  {/* Corner brackets */}
+                  <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-white"></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-white"></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-white"></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-white"></div>
+
+                  <div className="space-y-4">
+                    <h2 className="text-xl font-medium text-white">Flexibility</h2>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      A layer in your stack you won't know it exists until an agent goes rogue and Vigil stops it before
+                      a customer experiences it. Seamless protection that works invisibly until you need it most.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
