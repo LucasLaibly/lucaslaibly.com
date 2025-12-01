@@ -179,6 +179,73 @@ export default function Vigil() {
                   </div>
                 </div>
               </div>
+
+              {/* Description Section */}
+              <div className="mt-16 max-w-3xl mx-auto space-y-10">
+                {/* About Section */}
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-medium text-white">About the Project</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Vigil is an observability and governance platform designed for agentic systems. As AI agents become
+                    more autonomous and prevalent, the need for monitoring, policy enforcement, and safe deployment
+                    grows critical. This project explores how to build trust layers for agent-to-agent communication,
+                    ensuring that autonomous systems remain aligned with human intent and organizational policies.
+                  </p>
+                </div>
+
+                {/* Objectives Section */}
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-medium text-white">Objectives</h3>
+                  <ul className="text-gray-300 leading-relaxed space-y-3">
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-400 mt-1">→</span>
+                      <span>
+                        Create real-time visibility into agent-to-agent interactions and communication patterns
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-400 mt-1">→</span>
+                      <span>
+                        Implement policy enforcement mechanisms to prevent behavior echoing and maintain guardrails
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-400 mt-1">→</span>
+                      <span>
+                        Design an invisible safety layer that operates seamlessly until intervention is needed
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-400 mt-1">→</span>
+                      <span>
+                        Build tools that enable safe deployment of autonomous agents in production environments
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Learnings Section */}
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-medium text-white">Key Learnings</h3>
+                  <div className="text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                      <span className="text-white font-medium">Agent Behavior is Emergent:</span> Traditional monitoring
+                      approaches fail when agents can dynamically adapt. Observability must account for emergent
+                      behaviors and unexpected interaction patterns.
+                    </p>
+                    <p>
+                      <span className="text-white font-medium">Policy Thresholds Matter:</span> Hard rules break agent
+                      flexibility, while no rules create chaos. The key is finding the right threshold-based policies
+                      that allow autonomy while preventing dangerous drift.
+                    </p>
+                    <p>
+                      <span className="text-white font-medium">Invisibility is a Feature:</span> The best governance
+                      systems don't interfere with normal operation. Vigil aims to be a transparent layer that only
+                      surfaces when protection is needed, maintaining both safety and developer experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
