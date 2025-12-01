@@ -179,6 +179,71 @@ export default function Vigil() {
                   </div>
                 </div>
               </div>
+
+              {/* About the Project */}
+              <div className="mt-16 max-w-4xl mx-auto">
+                <h2 className="text-2xl font-medium text-white mb-6">About the Project</h2>
+                <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                  Vigil is an observability and governance platform designed for agentic systems. As AI agents become
+                  more autonomous and prevalent, the need for monitoring, policy enforcement, and safe deployment grows
+                  critical. In this project, I am exploring how to build trust layers for agent-to-agent communication,
+                  ensuring that autonomous systems remain aligned with human intent and organizational policies.
+                </p>
+
+                {/* Objectives */}
+                <div className="mb-8">
+                  <h3 className="text-xl font-medium text-white mb-4">Objectives</h3>
+                  <div className="space-y-3">
+                    <div className="flex gap-3">
+                      <span className="text-gray-500 flex-shrink-0">→</span>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        Create real-time visibility into agent-to-agent interactions and communication patterns
+                      </p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-gray-500 flex-shrink-0">→</span>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        Implement policy enforcement mechanisms to prevent behavior echoing and maintain guardrails
+                      </p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-gray-500 flex-shrink-0">→</span>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        Design an invisible safety layer that operates seamlessly until intervention is needed
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Key Learnings */}
+                <div>
+                  <h3 className="text-xl font-medium text-white mb-4">Key Learnings</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Agent Behavior is Emergent:</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        Traditional monitoring approaches fail when agents can dynamically adapt. Observability must
+                        account for emergent behaviors and unexpected interaction patterns.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Policy Thresholds Matter:</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        Hard rules break agent flexibility, while no rules create chaos. The key is finding the right
+                        threshold-based policies that allow autonomy while preventing dangerous drift.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Invisibility is a Feature:</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        The best governance systems don't interfere with normal operation. Vigil aims to be a
+                        transparent layer that only surfaces when protection is needed, maintaining both safety and
+                        developer experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
