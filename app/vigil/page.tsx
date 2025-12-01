@@ -188,7 +188,7 @@ export default function Vigil() {
                   <p className="text-gray-300 leading-relaxed">
                     Vigil is an observability and governance platform designed for agentic systems. As AI agents become
                     more autonomous and prevalent, the need for monitoring, policy enforcement, and safe deployment
-                    grows critical. This project explores how to build trust layers for agent-to-agent communication,
+                    grows critical. In this project, I am exploring how to build trust layers for agent-to-agent communication,
                     ensuring that autonomous systems remain aligned with human intent and organizational policies.
                   </p>
                 </div>
