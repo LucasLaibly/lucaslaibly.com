@@ -215,12 +215,6 @@ export default function Vigil() {
                         Design an invisible safety layer that operates seamlessly until intervention is needed
                       </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-green-400 mt-1">→</span>
-                      <span>
-                        Build tools that enable safe deployment of autonomous agents in production environments
-                      </span>
-                    </li>
                   </ul>
                 </div>
 
